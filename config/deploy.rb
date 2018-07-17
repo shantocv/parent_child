@@ -39,6 +39,8 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
+  task :start do ; end
+
   desc 'Create Directories for Puma Pids and Socket'
   task :make_dirs do
     on roles(:app) do
@@ -51,6 +53,7 @@ namespace :puma do
 end
 
 namespace :deploy do
+
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:app) do

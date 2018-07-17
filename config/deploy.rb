@@ -4,8 +4,6 @@ lock "~> 3.11.0"
 set :application, "parent_child"
 set :repo_url, "git@github.com:shantocv/parent_child.git"
 
-
-
 # Change these
 server '139.59.84.42', port: 3000, roles: [:web, :app, :db], primary: true
 
